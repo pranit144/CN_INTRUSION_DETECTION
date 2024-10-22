@@ -1,0 +1,385 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+}
+
+.buttons .btn {
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-left: 1rem;
+}
+
+.btn-outline {
+    border: 2px solid #28a745;
+    color: #28a745;
+    background-color: transparent;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    color: #fff;
+}
+
+.btn-outline:hover,
+.btn-primary:hover {
+    opacity: 0.8;
+}
+
+/* Hero Section Styles */
+.hero {
+    background-image: url('bg1.jpg'); /* Your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Optional: darkens the image */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero-buttons .btn {
+    padding: 1rem 2rem;
+    margin-right: 1rem;
+}
+
+.btn-secondary {
+    background-color: #ffc107;
+    color: #000;
+}
+
+/* Section Styles */
+section {
+    padding: 4rem 5%;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #28a745;
+}
+
+/* Services Section */
+#services {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #28a745;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.service-item {
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+    color: #fff;
+    position: relative;
+    height: 250px; /* Adjust based on your design */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; /* Show pointer on hover */
+}
+
+/* Overlay for readability */
+.service-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.service-item h3, .service-item p {
+    position: relative;
+    z-index: 2;
+}
+
+.service-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.service-item p {
+    font-size: 1rem;
+}
+
+/* Hover Effects */
+.service-item:hover {
+    background-color: rgba(40, 167, 69, 0.8); /* Change to a greenish background on hover */
+}
+
+.service-item:nth-child(1):hover {
+    background-color: rgba(255, 0, 0, 0.8); /* Change color for the first service */
+}
+
+.service-item:nth-child(2):hover {
+    background-color: rgba(0, 0, 255, 0.8); /* Change color for the second service */
+}
+
+.service-item:nth-child(3):hover {
+    background-color: rgba(255, 165, 0, 0.8); /* Change color for the third service */
+}
+
+.service-item:nth-child(4):hover {
+    background-color: rgba(75, 0, 130, 0.8); /* Change color for the fourth service */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .service-item {
+        height: 200px;
+    }
+}
+
+
+#services p {
+    margin-bottom: 2rem;
+}
+
+#services ul {
+    list-style: none;
+    padding: 0;
+}
+
+#services li {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+/* About Us Section */
+#about {
+    background-color: #ffffff; /* White background for contrast */
+    padding: 4rem 5%; /* Add padding for breathing space */
+    text-align: center; /* Center text */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners for a softer look */
+}
+
+#about h2 {
+    font-size: 2.5rem; /* Increase heading size */
+    color: #28a745; /* Green color for the heading */
+    margin-bottom: 1rem; /* Space below heading */
+    text-transform: uppercase; /* Uppercase for emphasis */
+    letter-spacing: 1px; /* Spacing between letters */
+}
+
+#about p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px; /* Limit paragraph width for better readability */
+    margin: 0 auto; /* Center paragraph */
+    line-height: 1.6; /* Increase line height for readability */
+}
+
+/* Get Started Section */
+#get-started {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 4rem 5%; /* Add padding for breathing space */
+    text-align: center; /* Center text */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#get-started h2 {
+    font-size: 2.5rem; /* Increase heading size */
+    color: #28a745; /* Green color for the heading */
+    margin-bottom: 1rem; /* Space below heading */
+}
+
+#get-started p {
+    margin-bottom: 2rem;
+}
+
+/* Contact Section */
+#contact {
+    background-color: #ffffff; /* White background for contrast */
+    padding: 4rem 5%; /* Add padding for breathing space */
+    text-align: center; /* Center text */
+    border-radius: 8px; /* Rounded corners for a softer look */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#contact h2 {
+    font-size: 2.5rem; /* Increase heading size */
+    color: #28a745; /* Green color for the heading */
+    margin-bottom: 1rem; /* Space below heading */
+    text-transform: uppercase; /* Uppercase for emphasis */
+}
+
+#contact p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Footer Styles */
+footer {
+    padding: 1rem;
+    text-align: center;
+    background-color: #28a745; /* Green background */
+    color: #fff;
+    position: relative; /* For positioning pseudo-elements */
+}
+
+footer p {
+    font-size: 1rem;
+}
+
+/* General Styles */
+h2 {
+    margin-top: 0; /* Remove top margin for headers */
+}
+
+/* Add a subtle hover effect to sections */
+#about:hover,
+#get-started:hover,
+#contact:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+    transition: transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Stack sections vertically on smaller screens */
+    #about, #get-started, #contact {
+        padding: 2rem 3%; /* Reduce padding on smaller screens */
+    }
+
+    #about h2, #get-started h2, #contact h2 {
+        font-size: 2rem; /* Slightly smaller font size */
+    }
+
+    .testimonial, .blog-post {
+        margin: 0 0 2rem 0; /* Space between testimonials/blog posts */
+    }
+}
+/* Image Slider Styles */
+.image-slider {
+    position: relative;
+    max-width: 100%; /* Full width for responsiveness */
+    margin: auto; /* Center the slider */
+    overflow: hidden; /* Hide overflow */
+}
+
+
+
+.slider-container {
+    display: flex; /* Align slides in a row */
+    align-items: center; /* Center the images vertically */
+}
+
+.slides {
+    display: flex; /* Align slides in a row */
+    animation: scroll 30s linear infinite; /* Continuous scrolling */
+}
+
+.slide {
+    min-width: 30%; /* Adjust this to change the number of images visible */
+    box-sizing: border-box;
+    display: flex; /* Enable flexbox for centering */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+}
+
+img {
+    max-width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Ensures that images are centered and scaled */
+}
+
+/* Continuous Scroll Animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%); /* Adjust this to control scroll length */
+    }
+}
